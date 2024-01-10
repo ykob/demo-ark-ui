@@ -1,12 +1,17 @@
-import { DatePicker, Portal } from '@ark-ui/react'
+import { DatePicker, type DatePickerProps, Portal } from "@ark-ui/react";
+import { css, cx } from "styled-system/css";
+import { InputField } from ".";
 
-export const ArkDatePicker = () => {
+type ArkDatePickerProps = DatePickerProps & React.RefAttributes<HTMLDivElement>;
+
+export const ArkDatePicker = ({ className, ...props }: ArkDatePickerProps) => {
   return (
-    <DatePicker.Root>
-      <DatePicker.Control>
-        <DatePicker.Input />
+    <DatePicker.Root className={cx(styles.wrap, className)} {...props}>
+      <DatePicker.Control className={styles.controlWrap}>
+        <DatePicker.Input asChild>
+          <InputField />
+        </DatePicker.Input>
         <DatePicker.Trigger>📅</DatePicker.Trigger>
-        <DatePicker.ClearTrigger>Clear</DatePicker.ClearTrigger>
       </DatePicker.Control>
       <Portal>
         <DatePicker.Positioner>
@@ -25,7 +30,9 @@ export const ArkDatePicker = () => {
                     <DatePicker.TableHead>
                       <DatePicker.TableRow>
                         {api.weekDays.map((weekDay, id) => (
-                          <DatePicker.TableHeader key={id}>{weekDay.short}</DatePicker.TableHeader>
+                          <DatePicker.TableHeader key={id}>
+                            {weekDay.short}
+                          </DatePicker.TableHeader>
                         ))}
                       </DatePicker.TableRow>
                     </DatePicker.TableHead>
@@ -34,7 +41,9 @@ export const ArkDatePicker = () => {
                         <DatePicker.TableRow key={id}>
                           {week.map((day, id) => (
                             <DatePicker.TableCell key={id} value={day}>
-                              <DatePicker.TableCellTrigger>{day.day}</DatePicker.TableCellTrigger>
+                              <DatePicker.TableCellTrigger>
+                                {day.day}
+                              </DatePicker.TableCellTrigger>
                             </DatePicker.TableCell>
                           ))}
                         </DatePicker.TableRow>
@@ -48,5 +57,16 @@ export const ArkDatePicker = () => {
         </DatePicker.Positioner>
       </Portal>
     </DatePicker.Root>
-  )
-}
+  );
+};
+
+const styles = {
+  wrap: css({
+    height: "2em",
+    position: "relative",
+  }),
+  controlWrap: css({
+    display: "flex",
+    gap: 2,
+  }),
+};
