@@ -1,3 +1,4 @@
+import { CalendarDate } from "@internationalized/date";
 import { css, cx } from "styled-system/css";
 import { flex } from "styled-system/patterns";
 import { DatePicker } from "./components";
@@ -16,12 +17,17 @@ function App() {
       <section>
         <h2>DatePicker</h2>
         <div className={cx(css({ flex: 1, gap: 4 }), flex())}>
-          <DatePicker />
+          <DatePicker locale="ja-JP" />
           <DatePicker
+            locale="ja-JP"
             defaultValue={["2024-01-10"]}
             focusedValue={"2024-01-10"}
           />
-          <DatePicker />
+          <DatePicker
+            locale="ja-JP"
+            min={new CalendarDate(2020, 1, 1)}
+            max={new CalendarDate(2030, 1, 1)}
+          />
           <DatePicker />
         </div>
       </section>
