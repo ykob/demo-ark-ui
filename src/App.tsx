@@ -18,11 +18,7 @@ function App() {
         <h2>DatePicker</h2>
         <div className={cx(css({ flex: 1, gap: 4 }), flex())}>
           <DatePicker locale="ja-JP" />
-          <DatePicker
-            locale="ja-JP"
-            defaultValue={["2024-01-10"]}
-            focusedValue={"2024-01-10"}
-          />
+          <DatePicker locale="ja-JP" defaultValue={["2024-01-10"]} />
           <DatePicker
             locale="ja-JP"
             min={new CalendarDate(2020, 1, 1)}
