@@ -1,7 +1,7 @@
 import { CalendarDate } from "@internationalized/date";
 import { css, cx } from "styled-system/css";
 import { container, flex } from "styled-system/patterns";
-import { DatePicker, SectionHeading } from "./components";
+import { DatePicker, UISectionHeading, UISection } from "./components";
 
 export default function App() {
   return (
@@ -16,8 +16,8 @@ export default function App() {
           </li>
         </ul>
       </header>
-      <section>
-        <SectionHeading>DatePicker</SectionHeading>
+      <UISection>
+        <UISectionHeading>DatePicker</UISectionHeading>
         <div className={cx(css({ flex: 1, gap: 4 }), flex())}>
           <DatePicker locale="ja-JP" />
           <DatePicker locale="ja-JP" defaultValue={["2024-01-10"]} />
@@ -28,7 +28,7 @@ export default function App() {
           />
           <DatePicker />
         </div>
-      </section>
+      </UISection>
     </div>
   );
 }
@@ -37,8 +37,8 @@ const styles = {
   container: css({
     display: "flex",
     flexDir: "column",
-    gap: 6,
-    py: 12,
+    gap: 10,
+    py: 16,
   }),
   heading: css({
     fontSize: "4xl",

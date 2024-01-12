@@ -1,13 +1,13 @@
 import { ComponentProps } from "react";
 import { css, cx } from "styled-system/css";
 
-type SectionHeadingProps = ComponentProps<"h2">;
+type UISectionHeadingProps = ComponentProps<"h2">;
 
-export function SectionHeading({
+export function UISectionHeading({
   children,
   className,
   ...props
-}: SectionHeadingProps) {
+}: UISectionHeadingProps) {
   return (
     <h2 className={cx(styles.wrap, className)} {...props}>
       {children}
