@@ -1,1 +1,1 @@
-export { ArkDatePicker as DatePicker } from "../ark-ui/date-picker";
+export { ArkDatePicker as DatePicker } from "./date-picker";
