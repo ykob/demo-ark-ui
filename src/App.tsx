@@ -1,21 +1,23 @@
 import { CalendarDate } from "@internationalized/date";
 import { css, cx } from "styled-system/css";
-import { flex } from "styled-system/patterns";
-import { DatePicker } from "./components";
+import { container, flex } from "styled-system/patterns";
+import { DatePicker, SectionHeading } from "./components";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <h1>Demo for Ark UI</h1>
-      <ul>
-        <li>
-          <a href="https://ark-ui.com/" target="_blank">
-            Ark UI
-          </a>
-        </li>
-      </ul>
+    <div className={cx(container(), styles.container)}>
+      <header>
+        <h1 className={styles.heading}>Demo for Ark UI</h1>
+        <ul>
+          <li>
+            <a href="https://ark-ui.com/" target="_blank">
+              Ark UI
+            </a>
+          </li>
+        </ul>
+      </header>
       <section>
-        <h2>DatePicker</h2>
+        <SectionHeading>DatePicker</SectionHeading>
         <div className={cx(css({ flex: 1, gap: 4 }), flex())}>
           <DatePicker locale="ja-JP" />
           <DatePicker locale="ja-JP" defaultValue={["2024-01-10"]} />
@@ -31,4 +33,14 @@ function App() {
   );
 }
 
-export default App;
+const styles = {
+  container: css({
+    display: "flex",
+    flexDir: "column",
+    gap: 6,
+    py: 12,
+  }),
+  heading: css({
+    fontSize: "4xl",
+  }),
+};
