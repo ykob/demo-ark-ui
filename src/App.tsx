@@ -1,7 +1,8 @@
 import { CalendarDate } from "@internationalized/date";
 import { css, cx } from "styled-system/css";
 import { container, flex } from "styled-system/patterns";
-import { DatePicker, UISectionHeading, UISection } from "./components";
+import { DatePicker } from "./components/ark-ui";
+import { UISectionHeading, UISection } from "./components/common";
 
 export default function App() {
   return (

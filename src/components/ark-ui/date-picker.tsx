@@ -1,6 +1,6 @@
 import { DatePicker, type DatePickerProps, Portal } from "@ark-ui/react";
 import { css, cx } from "styled-system/css";
-import { InputField } from ".";
+import { InputField } from "../common";
 
 type ArkDatePickerProps = DatePickerProps & React.RefAttributes<HTMLDivElement>;
 
