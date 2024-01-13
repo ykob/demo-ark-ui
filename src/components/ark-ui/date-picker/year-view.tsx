@@ -1,5 +1,5 @@
-import { DatePicker } from "@ark-ui/react";
-import { DatePickerViewControl } from "./view-control";
+import { DatePicker } from '@ark-ui/react';
+import { DatePickerViewControl } from './view-control';
 
 export function DatePickerYearView() {
   return (

@@ -1,6 +1,6 @@
-import { DatePicker } from "@ark-ui/react";
-import { InputField } from "@/components/common";
-import { css } from "styled-system/css";
+import { InputField } from '@/components/common';
+import { DatePicker } from '@ark-ui/react';
+import { css } from 'styled-system/css';
 
 export function DatePickerControl() {
   return (
@@ -15,7 +15,7 @@ export function DatePickerControl() {
 
 const styles = {
   wrap: css({
-    display: "flex",
+    display: 'flex',
     gap: 2,
   }),
 };

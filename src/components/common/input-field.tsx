@@ -1,11 +1,11 @@
-import { ComponentProps } from "react";
-import { css, cx } from "styled-system/css";
+import { ComponentProps } from 'react';
+import { css, cx } from 'styled-system/css';
 
-type InputFieldProps = ComponentProps<"input">;
+type InputFieldProps = ComponentProps<'input'>;
 
 export function InputField({
   className,
-  type = "text",
+  type = 'text',
   ...props
 }: InputFieldProps) {
   return (
@@ -15,11 +15,11 @@ export function InputField({
 
 const styles = {
   wrap: css({
-    boxSizing: "border-box",
-    width: "100%",
-    height: "2em",
+    boxSizing: 'border-box',
+    width: '100%',
+    height: '2em',
     px: 2,
-    border: "1px solid",
-    rounded: "sm",
+    border: '1px solid',
+    rounded: 'sm',
   }),
 };

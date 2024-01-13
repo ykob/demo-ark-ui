@@ -1,5 +1,5 @@
-import { DatePicker } from "@ark-ui/react";
-import { DatePickerViewControl } from "./view-control";
+import { DatePicker } from '@ark-ui/react';
+import { DatePickerViewControl } from './view-control';
 
 export function DatePickerMonthView() {
   return (
@@ -10,7 +10,7 @@ export function DatePickerMonthView() {
           <DatePicker.Table>
             <DatePicker.TableBody>
               {api
-                .getMonthsGrid({ columns: 4, format: "short" })
+                .getMonthsGrid({ columns: 4, format: 'short' })
                 .map((months, id) => (
                   <DatePicker.TableRow key={id}>
                     {months.map((month, id) => (

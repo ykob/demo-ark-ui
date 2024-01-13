@@ -1,7 +1,7 @@
-import { ComponentProps } from "react";
-import { css, cx } from "styled-system/css";
+import { ComponentProps } from 'react';
+import { css, cx } from 'styled-system/css';
 
-type UISectionProps = ComponentProps<"section">;
+type UISectionProps = ComponentProps<'section'>;
 
 export function UISection({ children, className, ...props }: UISectionProps) {
   return (
@@ -13,8 +13,8 @@ export function UISection({ children, className, ...props }: UISectionProps) {
 
 const styles = {
   wrap: css({
-    display: "flex",
-    flexDir: "column",
+    display: 'flex',
+    flexDir: 'column',
     gap: 3,
   }),
 };

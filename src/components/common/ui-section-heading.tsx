@@ -1,7 +1,7 @@
-import { ComponentProps } from "react";
-import { css, cx } from "styled-system/css";
+import { ComponentProps } from 'react';
+import { css, cx } from 'styled-system/css';
 
-type UISectionHeadingProps = ComponentProps<"h2">;
+type UISectionHeadingProps = ComponentProps<'h2'>;
 
 export function UISectionHeading({
   children,
@@ -17,6 +17,6 @@ export function UISectionHeading({
 
 const styles = {
   wrap: css({
-    fontSize: "2xl",
+    fontSize: '2xl',
   }),
 };

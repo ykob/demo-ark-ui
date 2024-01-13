@@ -1,9 +1,9 @@
-import { DatePicker, type DatePickerProps, Portal } from "@ark-ui/react";
-import { css, cx } from "styled-system/css";
-import { DatePickerControl } from "./control";
-import { DatePickerDayView } from "./day-view";
-import { DatePickerMonthView } from "./month-view";
-import { DatePickerYearView } from "./year-view";
+import { DatePicker, type DatePickerProps, Portal } from '@ark-ui/react';
+import { css, cx } from 'styled-system/css';
+import { DatePickerControl } from './control';
+import { DatePickerDayView } from './day-view';
+import { DatePickerMonthView } from './month-view';
+import { DatePickerYearView } from './year-view';
 
 type ArkDatePickerProps = DatePickerProps & React.RefAttributes<HTMLDivElement>;
 
@@ -26,7 +26,7 @@ export const ArkDatePicker = ({ className, ...props }: ArkDatePickerProps) => {
 
 const styles = {
   wrap: css({
-    height: "2em",
-    position: "relative",
+    height: '2em',
+    position: 'relative',
   }),
 };
