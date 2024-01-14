@@ -1,3 +1,4 @@
+export { FloatingBox } from './floating-box';
 export { InputField } from './input-field';
-export { UISectionHeading } from './ui-section-heading';
 export { UISection } from './ui-section';
+export { UISectionHeading } from './ui-section-heading';

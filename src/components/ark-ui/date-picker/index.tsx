@@ -1,3 +1,4 @@
+import { FloatingBox } from '@/components/common';
 import { DatePicker, type DatePickerProps, Portal } from '@ark-ui/react';
 import { css, cx } from 'styled-system/css';
 import { DatePickerControl } from './control';
@@ -13,10 +14,12 @@ export const ArkDatePicker = ({ className, ...props }: ArkDatePickerProps) => {
       <DatePickerControl />
       <Portal>
         <DatePicker.Positioner>
-          <DatePicker.Content>
-            <DatePickerDayView />
-            <DatePickerMonthView />
-            <DatePickerYearView />
+          <DatePicker.Content asChild>
+            <FloatingBox>
+              <DatePickerDayView />
+              <DatePickerMonthView />
+              <DatePickerYearView />
+            </FloatingBox>
           </DatePicker.Content>
         </DatePicker.Positioner>
       </Portal>
