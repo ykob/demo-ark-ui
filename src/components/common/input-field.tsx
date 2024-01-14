@@ -17,9 +17,10 @@ const styles = {
   wrap: css({
     boxSizing: 'border-box',
     width: '100%',
-    height: '2em',
+    height: 8,
     px: 2,
     border: '1px solid',
+    borderColor: 'gray.500',
     rounded: 'sm',
   }),
 };

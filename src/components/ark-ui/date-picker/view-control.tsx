@@ -16,7 +16,6 @@ export function DatePickerViewControl() {
 const styles = {
   wrap: css({
     display: 'flex',
-    gap: 2,
     justifyContent: 'space-between',
   }),
 };
