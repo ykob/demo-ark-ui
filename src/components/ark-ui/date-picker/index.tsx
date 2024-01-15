@@ -14,7 +14,7 @@ export const ArkDatePicker = ({ className, ...props }: ArkDatePickerProps) => {
       <DatePickerControl />
       <Portal>
         <DatePicker.Positioner>
-          <DatePicker.Content asChild>
+          <DatePicker.Content>
             <FloatingBox>
               <DatePickerDayView />
               <DatePickerMonthView />

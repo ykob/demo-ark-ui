@@ -1,11 +1,13 @@
+import { TransparentButton } from '@/components/common';
 import { DatePicker } from '@ark-ui/react';
+import { viewStyles } from './styles';
 import { DatePickerViewControl } from './view-control';
 
 export function DatePickerYearView() {
   return (
     <DatePicker.View view="year">
       {(api) => (
-        <>
+        <div className={viewStyles}>
           <DatePickerViewControl />
           <DatePicker.Table>
             <DatePicker.TableBody>
@@ -14,7 +16,7 @@ export function DatePickerYearView() {
                   {years.map((year, id) => (
                     <DatePicker.TableCell key={id} value={year.value}>
                       <DatePicker.TableCellTrigger>
-                        {year.label}
+                        <TransparentButton>{year.label}</TransparentButton>
                       </DatePicker.TableCellTrigger>
                     </DatePicker.TableCell>
                   ))}
@@ -22,7 +24,7 @@ export function DatePickerYearView() {
               ))}
             </DatePicker.TableBody>
           </DatePicker.Table>
-        </>
+        </div>
       )}
     </DatePicker.View>
   );
