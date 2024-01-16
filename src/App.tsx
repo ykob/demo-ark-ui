@@ -1,22 +1,14 @@
+import { DatePicker } from '@/components/ark-ui';
+import { UISection, UISectionHeading } from '@/components/common';
+import { PageHeader } from '@/components/layouts';
 import { CalendarDate } from '@internationalized/date';
 import { css, cx } from 'styled-system/css';
 import { container, flex } from 'styled-system/patterns';
-import { DatePicker } from './components/ark-ui';
-import { LinkText, UISection, UISectionHeading } from './components/common';
 
 export default function App() {
   return (
     <div className={cx(container(), styles.container)}>
-      <header>
-        <h1 className={styles.heading}>Demo for Ark UI</h1>
-        <ul>
-          <li>
-            <LinkText href="https://ark-ui.com/" target="_blank">
-              Ark UI
-            </LinkText>
-          </li>
-        </ul>
-      </header>
+      <PageHeader />
       <UISection>
         <UISectionHeading>DatePicker</UISectionHeading>
         <div className={cx(css({ flex: 1, gap: 4 }), flex())}>
@@ -40,8 +32,5 @@ const styles = {
     flexDir: 'column',
     gap: 10,
     py: 16,
-  }),
-  heading: css({
-    fontSize: '4xl',
   }),
 };
