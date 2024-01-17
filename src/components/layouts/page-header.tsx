@@ -1,5 +1,5 @@
-import { LinkText } from '@/components/common';
 import { css } from 'styled-system/css';
+import { LinkText } from '~/components/common';
 
 export function PageHeader() {
   return (

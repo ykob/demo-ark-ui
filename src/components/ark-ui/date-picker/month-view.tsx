@@ -1,5 +1,5 @@
-import { TransparentButton } from '@/components/common';
 import { DatePicker } from '@ark-ui/react';
+import { TransparentButton } from '~/components/common';
 import { viewStyles } from './styles';
 import { DatePickerViewControl } from './view-control';
 

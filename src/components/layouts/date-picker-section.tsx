@@ -1,9 +1,9 @@
-import { DatePicker } from '@/components/ark-ui';
-import { UISection, UISectionHeading } from '@/components/common';
-import { useRef } from 'react';
 import { CalendarDate } from '@internationalized/date';
+import { useRef } from 'react';
 import { css, cx } from 'styled-system/css';
 import { flex } from 'styled-system/patterns';
+import { DatePicker } from '~/components/ark-ui';
+import { UISection, UISectionHeading } from '~/components/common';
 
 export function DatePickerSection() {
   const ref = useRef<HTMLDivElement>(null);

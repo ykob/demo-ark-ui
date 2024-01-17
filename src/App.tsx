@@ -1,6 +1,6 @@
-import { DatePickerSection, PageHeader } from '@/components/layouts';
 import { css, cx } from 'styled-system/css';
 import { container } from 'styled-system/patterns';
+import { DatePickerSection, PageHeader } from '~/components/layouts';
 
 export default function App() {
   return (
