@@ -41,6 +41,14 @@ const styles = {
       _active: {
         bg: 'blue.300',
       },
+      _disabled: {
+        opacity: 0.4,
+        cursor: 'not-allowed',
+      },
+      '[aria-disabled] &': {
+        opacity: 0.4,
+        cursor: 'not-allowed',
+      },
     },
     variants: {
       buttonSize: {
