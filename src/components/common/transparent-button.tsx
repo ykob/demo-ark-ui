@@ -42,12 +42,15 @@ const styles = {
         bg: 'blue.300',
       },
       _disabled: {
-        opacity: 0.4,
+        opacity: 0.3,
         cursor: 'not-allowed',
       },
       '[aria-disabled] &': {
-        opacity: 0.4,
+        opacity: 0.3,
         cursor: 'not-allowed',
+        _hover: {
+          bg: 'transparent',
+        },
       },
     },
     variants: {
