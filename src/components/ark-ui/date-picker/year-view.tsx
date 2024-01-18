@@ -15,7 +15,7 @@ export function DatePickerYearView() {
                 <DatePicker.TableRow key={id}>
                   {years.map((year, id) => (
                     <DatePicker.TableCell key={id} value={year.value}>
-                      <DatePicker.TableCellTrigger>
+                      <DatePicker.TableCellTrigger asChild>
                         <TransparentButton>{year.label}</TransparentButton>
                       </DatePicker.TableCellTrigger>
                     </DatePicker.TableCell>
