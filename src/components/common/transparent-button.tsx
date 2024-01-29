@@ -45,6 +45,9 @@ const styles = {
         opacity: 0.3,
         cursor: 'not-allowed',
       },
+      _selected: {
+        bg: 'blue.300',
+      },
       '[aria-disabled] &': {
         opacity: 0.3,
         cursor: 'not-allowed',
