@@ -1,11 +1,16 @@
 import { css, cx } from 'styled-system/css';
 import { container } from 'styled-system/patterns';
-import { DatePickerSection, PageHeader } from '~/components/layouts';
+import {
+  ComboboxSection,
+  DatePickerSection,
+  PageHeader,
+} from '~/components/layouts';
 
 export default function App() {
   return (
     <div className={cx(container(), styles.container)}>
       <PageHeader />
+      <ComboboxSection />
       <DatePickerSection />
     </div>
   );
