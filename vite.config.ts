@@ -6,11 +6,12 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "~": `${__dirname}/src/`,
+      '~': `${__dirname}/src/`,
       'styled-system': `${__dirname}/styled-system/`,
     },
   },
   server: {
     host: true,
+    port: 3000,
   },
 });
