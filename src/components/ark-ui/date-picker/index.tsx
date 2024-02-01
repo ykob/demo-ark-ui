@@ -1,4 +1,4 @@
-import { DatePicker, Portal, type DatePickerProps } from '@ark-ui/react';
+import { DatePicker, Portal, type DatePickerRootProps } from '@ark-ui/react';
 import { RefObject } from 'react';
 import { css, cx } from 'styled-system/css';
 import { FloatingBox } from '~/components/common';
@@ -7,7 +7,7 @@ import { DatePickerDayView } from './day-view';
 import { DatePickerMonthView } from './month-view';
 import { DatePickerYearView } from './year-view';
 
-type ArkDatePickerProps = DatePickerProps &
+type ArkDatePickerProps = DatePickerRootProps &
   React.RefAttributes<HTMLDivElement> & {
     portalContainer?: RefObject<HTMLElement>;
   };

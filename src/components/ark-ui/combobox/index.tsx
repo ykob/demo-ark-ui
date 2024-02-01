@@ -1,9 +1,9 @@
-import { Combobox, Portal, type ComboboxProps } from '@ark-ui/react';
+import { Combobox, Portal, type ComboboxRootProps } from '@ark-ui/react';
 import React, { RefObject } from 'react';
 import { css, cx } from 'styled-system/css';
 import { FloatingBox, InputField } from '~/components/common';
 
-type ArkComboboxProps = ComboboxProps<{
+type ArkComboboxProps = ComboboxRootProps<{
   label: string;
   value: string;
 }> &
