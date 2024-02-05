@@ -2,6 +2,9 @@ import { Combobox, Portal, type ComboboxRootProps } from '@ark-ui/react';
 import React, { RefObject } from 'react';
 import { css, cx } from 'styled-system/css';
 import { FloatingBox, InputField } from '~/components/common';
+import { TransparentButton } from '../../common/transparent-button';
+import { mdiChevronDown, mdiClose } from '@mdi/js';
+import { Icon } from '@mdi/react';
 
 type ArkComboboxProps = ComboboxRootProps<{
   label: string;
@@ -24,12 +27,20 @@ export const ArkCombobox = ({
       {...props}
     >
       <Combobox.Label>Framework</Combobox.Label>
-      <Combobox.Control>
+      <Combobox.Control className={styles.control}>
         <Combobox.Input asChild>
           <InputField />
         </Combobox.Input>
-        <Combobox.Trigger>Open</Combobox.Trigger>
-        <Combobox.ClearTrigger>Clear</Combobox.ClearTrigger>
+        <Combobox.Trigger>
+          <TransparentButton square>
+            <Icon path={mdiChevronDown} size={1} />
+          </TransparentButton>
+        </Combobox.Trigger>
+        <Combobox.ClearTrigger>
+          <TransparentButton square>
+            <Icon path={mdiClose} size={1} />
+          </TransparentButton>
+        </Combobox.ClearTrigger>
       </Combobox.Control>
       <Portal>
         <Combobox.Positioner>
@@ -56,7 +67,10 @@ export const ArkCombobox = ({
 
 const styles = {
   wrap: css({
-    height: '2em',
     position: 'relative',
+  }),
+  control: css({
+    display: 'flex',
+    gap: 1,
   }),
 };
