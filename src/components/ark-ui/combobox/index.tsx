@@ -42,7 +42,7 @@ export const ArkCombobox = ({
           </TransparentButton>
         </Combobox.ClearTrigger>
       </Combobox.Control>
-      <Portal>
+      <Portal container={portalContainer}>
         <Combobox.Positioner>
           <Combobox.Content>
             <FloatingBox>
