@@ -1,10 +1,10 @@
 import { Combobox, Portal, type ComboboxRootProps } from '@ark-ui/react';
+import { mdiChevronDown, mdiClose } from '@mdi/js';
+import { Icon } from '@mdi/react';
 import React, { RefObject } from 'react';
 import { css, cx } from 'styled-system/css';
 import { FloatingBox, InputField } from '~/components/common';
 import { TransparentButton } from '../../common/transparent-button';
-import { mdiChevronDown, mdiClose } from '@mdi/js';
-import { Icon } from '@mdi/react';
 
 type ArkComboboxProps = ComboboxRootProps<{
   label: string;
