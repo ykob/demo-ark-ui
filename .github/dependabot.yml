@@ -18,5 +18,14 @@ updates:
           - '@types/react-dom'
       eslint:
         patterns:
-          - '*eslint'
+          - 'eslint*'
           - 'prettier-plugin-organize-imports'
+          - "@typescript-eslint*"
+      vite:
+        patterns:
+          - 'vite'
+          - '@vitejs/plugin-react'
+      css:
+        patterns:
+          - 'postcss'
+          - '@pandacss/dev'
