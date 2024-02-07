@@ -9,6 +9,9 @@ updates:
     directory: '/' # Location of package manifests
     schedule:
       interval: 'weekly'
+      day: 'saturday'
+      time: '09:00'
+      timezone: 'Asia/Tokyo'
     groups:
       react:
         patterns:
@@ -20,7 +23,7 @@ updates:
         patterns:
           - 'eslint*'
           - 'prettier-plugin-organize-imports'
-          - "@typescript-eslint*"
+          - '@typescript-eslint*'
       vite:
         patterns:
           - 'vite'
