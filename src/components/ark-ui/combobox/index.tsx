@@ -51,7 +51,11 @@ export const ArkCombobox = ({
                   Frameworks
                 </Combobox.ItemGroupLabel>
                 {items.map((item) => (
-                  <Combobox.Item key={item.value} item={item}>
+                  <Combobox.Item
+                    key={item.value}
+                    item={item}
+                    className={styles.item}
+                  >
                     <Combobox.ItemText>{item.label}</Combobox.ItemText>
                     <Combobox.ItemIndicator>✓</Combobox.ItemIndicator>
                   </Combobox.Item>
@@ -72,5 +76,22 @@ const styles = {
   control: css({
     display: 'flex',
     gap: 1,
+  }),
+  item: css({
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    gap: 1,
+    py: 1,
+    px: 2,
+    _hover: {
+      bg: 'blue.200',
+    },
+    _checked: {
+      bg: 'blue.300',
+    },
+    _disabled: {
+      color: 'gray.300',
+    },
   }),
 };
