@@ -31,12 +31,12 @@ export const ArkCombobox = ({
         <Combobox.Input asChild>
           <InputField />
         </Combobox.Input>
-        <Combobox.Trigger>
+        <Combobox.Trigger asChild>
           <TransparentButton square>
             <Icon path={mdiChevronDown} size={1} />
           </TransparentButton>
         </Combobox.Trigger>
-        <Combobox.ClearTrigger>
+        <Combobox.ClearTrigger asChild>
           <TransparentButton square>
             <Icon path={mdiClose} size={1} />
           </TransparentButton>
