@@ -21,8 +21,8 @@ export function DatePickerSection() {
         <DatePicker
           portalContainer={ref}
           locale="ja-JP"
-          min={new CalendarDate(2020, 1, 1)}
-          max={new CalendarDate(2030, 1, 1)}
+          min={new CalendarDate(2024, 2, 15)}
+          max={new CalendarDate(2024, 11, 15)}
         />
         <DatePicker portalContainer={ref} />
       </div>
