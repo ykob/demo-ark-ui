@@ -1,5 +1,5 @@
 import { Combobox, Portal, type ComboboxRootProps } from '@ark-ui/react';
-import { mdiChevronDown, mdiClose } from '@mdi/js';
+import { mdiCheck, mdiChevronDown, mdiClose } from '@mdi/js';
 import { Icon } from '@mdi/react';
 import React, { RefObject } from 'react';
 import { css, cx } from 'styled-system/css';
@@ -57,7 +57,9 @@ export const ArkCombobox = ({
                     className={styles.item}
                   >
                     <Combobox.ItemText>{item.label}</Combobox.ItemText>
-                    <Combobox.ItemIndicator>✓</Combobox.ItemIndicator>
+                    <Combobox.ItemIndicator>
+                      <Icon path={mdiCheck} size={0.8} />
+                    </Combobox.ItemIndicator>
                   </Combobox.Item>
                 ))}
               </Combobox.ItemGroup>
@@ -92,6 +94,9 @@ const styles = {
     },
     _disabled: {
       color: 'gray.300',
+    },
+    _highlighted: {
+      bg: 'blue.200',
     },
   }),
 };
