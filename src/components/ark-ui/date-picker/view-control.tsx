@@ -1,4 +1,4 @@
-import { DatePicker } from '@ark-ui/react/date-picker';
+import { DatePicker } from '@ark-ui/react';
 import { css } from 'styled-system/css';
 import { TransparentButton } from '~/components/common';
 

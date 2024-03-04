@@ -1,5 +1,4 @@
-import { Combobox, type ComboboxRootProps } from '@ark-ui/react/combobox';
-import { Portal } from '@ark-ui/react/portal';
+import { Combobox, Portal, type ComboboxRootProps } from '@ark-ui/react';
 import { mdiCheck, mdiChevronDown, mdiClose } from '@mdi/js';
 import { Icon } from '@mdi/react';
 import React, { RefObject } from 'react';
