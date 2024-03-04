@@ -1,4 +1,4 @@
-import { DatePicker } from '@ark-ui/react';
+import { DatePicker } from '@ark-ui/react/date-picker';
 import { mdiCalendar } from '@mdi/js';
 import { Icon } from '@mdi/react';
 import { css } from 'styled-system/css';
