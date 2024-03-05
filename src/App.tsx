@@ -4,6 +4,7 @@ import {
   ComboboxSection,
   DatePickerSection,
   PageHeader,
+  ToastSection,
 } from '~/components/layouts';
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
       <PageHeader />
       <ComboboxSection />
       <DatePickerSection />
+      <ToastSection />
     </div>
   );
 }
