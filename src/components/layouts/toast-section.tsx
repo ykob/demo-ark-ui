@@ -25,6 +25,13 @@ export function ToastSection() {
             toast.create({
               title: `#${Math.floor(Math.random() * 1000)}`,
               description: 'It is a description text.',
+              render: (toast) => (
+                <Toast
+                  toastTitle={toast.title}
+                  toastDescription={toast.description}
+                  removeToast={toast.dismiss}
+                />
+              ),
             });
           }}
         >
