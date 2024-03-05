@@ -4,7 +4,7 @@ import { Toast } from '~/components/common/';
 
 export function ToastSection() {
   const [Toaster, toast] = createToaster({
-    placement: 'bottom-start',
+    placement: 'bottom-end',
     render(toast) {
       return (
         <Toast
@@ -23,7 +23,7 @@ export function ToastSection() {
         <button
           onClick={() => {
             toast.create({
-              title: 'Hello World',
+              title: `#${Math.floor(Math.random() * 1000)}`,
               description: 'It is a description text.',
             });
           }}
