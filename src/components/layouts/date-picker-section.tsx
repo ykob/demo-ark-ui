@@ -1,4 +1,3 @@
-import { CalendarDate } from '@internationalized/date';
 import { useRef } from 'react';
 import { css, cx } from 'styled-system/css';
 import { flex } from 'styled-system/patterns';
@@ -21,8 +20,8 @@ export function DatePickerSection() {
         <DatePicker
           portalContainer={ref}
           locale="ja-JP"
-          min={new CalendarDate(2024, 2, 15)}
-          max={new CalendarDate(2024, 11, 15)}
+          min="2024-02-15"
+          max="2024-11-15"
         />
         <DatePicker portalContainer={ref} />
       </div>
