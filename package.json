@@ -20,7 +20,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.37.2",
+    "@pandacss/dev": "^0.39.2",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
