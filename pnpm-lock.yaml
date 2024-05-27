@@ -7,10 +7,10 @@ settings:
 dependencies:
   '@ark-ui/react':
     specifier: ^3.0.0
-    version: 3.0.0(@internationalized/date@3.5.2)(react-dom@18.2.0)(react@18.2.0)
+    version: 3.0.0(@internationalized/date@3.5.4)(react-dom@18.2.0)(react@18.2.0)
   '@internationalized/date':
-    specifier: ^3.5.2
-    version: 3.5.2
+    specifier: ^3.5.4
+    version: 3.5.4
   '@mdi/js':
     specifier: ^7.4.47
     version: 7.4.47
@@ -81,7 +81,7 @@ packages:
       '@jridgewell/trace-mapping': 0.3.20
     dev: true
 
-  /@ark-ui/anatomy@3.1.0(@internationalized/date@3.5.2):
+  /@ark-ui/anatomy@3.1.0(@internationalized/date@3.5.4):
     resolution: {integrity: sha512-msUQQ3zjZ0v+E7b/Fl+oxqJmDOj48c+vU1ahr60J4tCppzG1dON2Uv7m8L1xUCaD+8CGQuirjBiC+i8HjQkgIA==}
     dependencies:
       '@zag-js/accordion': 0.50.0
@@ -95,7 +95,7 @@ packages:
       '@zag-js/color-utils': 0.50.0
       '@zag-js/combobox': 0.50.0
       '@zag-js/date-picker': 0.50.0
-      '@zag-js/date-utils': 0.50.0(@internationalized/date@3.5.2)
+      '@zag-js/date-utils': 0.50.0(@internationalized/date@3.5.4)
       '@zag-js/dialog': 0.50.0
       '@zag-js/editable': 0.50.0
       '@zag-js/file-upload': 0.50.0
@@ -123,13 +123,13 @@ packages:
       - '@internationalized/date'
     dev: false
 
-  /@ark-ui/react@3.0.0(@internationalized/date@3.5.2)(react-dom@18.2.0)(react@18.2.0):
+  /@ark-ui/react@3.0.0(@internationalized/date@3.5.4)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-PPyVeh74WkmTPJ3UcKwRd5GCwXxzNwV/BeA0ea055R3+5vTOsiOl3kKR7pyRcAgsJCfo+yONEKh/1xjxNzul4g==}
     peerDependencies:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
     dependencies:
-      '@ark-ui/anatomy': 3.1.0(@internationalized/date@3.5.2)
+      '@ark-ui/anatomy': 3.1.0(@internationalized/date@3.5.4)
       '@zag-js/accordion': 0.51.1
       '@zag-js/avatar': 0.51.1
       '@zag-js/carousel': 0.51.1
@@ -141,7 +141,7 @@ packages:
       '@zag-js/combobox': 0.51.1
       '@zag-js/core': 0.51.1
       '@zag-js/date-picker': 0.51.1
-      '@zag-js/date-utils': 0.51.1(@internationalized/date@3.5.2)
+      '@zag-js/date-utils': 0.51.1(@internationalized/date@3.5.4)
       '@zag-js/dialog': 0.51.1
       '@zag-js/dom-query': 0.51.1
       '@zag-js/editable': 0.51.1
@@ -732,14 +732,14 @@ packages:
     engines: {node: '>=18.18'}
     dev: true
 
-  /@internationalized/date@3.5.2:
-    resolution: {integrity: sha512-vo1yOMUt2hzp63IutEaTUxROdvQg1qlMRsbCvbay2AK2Gai7wIgCyK5weEX3nHkiLgo4qCXHijFNC/ILhlRpOQ==}
-    dependencies:
-      '@swc/helpers': 0.5.3
-    dev: false
-
   /@internationalized/date@3.5.3:
     resolution: {integrity: sha512-X9bi8NAEHAjD8yzmPYT2pdJsbe+tYSEBAfowtlxJVJdZR3aK8Vg7ZUT1Fm5M47KLzp/M1p1VwAaeSma3RT7biw==}
+    dependencies:
+      '@swc/helpers': 0.5.6
+    dev: false
+
+  /@internationalized/date@3.5.4:
+    resolution: {integrity: sha512-qoVJVro+O0rBaw+8HPjUB1iH8Ihf8oziEnqMnvhJUSuVIrHOuZ6eNLHNvzXJKUvAtaDiqMnRlg8Z2mgh09BlUw==}
     dependencies:
       '@swc/helpers': 0.5.6
     dev: false
@@ -1121,12 +1121,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /@swc/helpers@0.5.3:
-    resolution: {integrity: sha512-FaruWX6KdudYloq1AHD/4nU+UsMTdNE8CKyrseXWEcgjDAbvkwJg2QGPAnfIJLIWsjZOSPLOAykK6fuYp4vp4A==}
-    dependencies:
-      tslib: 2.6.2
-    dev: false
 
   /@swc/helpers@0.5.6:
     resolution: {integrity: sha512-aYX01Ke9hunpoCexYAgQucEpARGQ5w/cqHFrIR+e9gdKb1QWTsVJuTJ2ozQzIAxLyRQe/m+2RqzkyOOGiMKRQA==}
@@ -1678,14 +1672,6 @@ packages:
       '@zag-js/utils': 0.51.1
     dev: false
 
-  /@zag-js/date-utils@0.50.0(@internationalized/date@3.5.2):
-    resolution: {integrity: sha512-cDJ9lE729MGV6hfcdrG0W7IHlacYZADU9FQwUnVrDv8Haz3YQ8I503LV8XdOnh3gVgwThGjj3pwKT2cRHoqnaA==}
-    peerDependencies:
-      '@internationalized/date': '>=3.0.0'
-    dependencies:
-      '@internationalized/date': 3.5.2
-    dev: false
-
   /@zag-js/date-utils@0.50.0(@internationalized/date@3.5.3):
     resolution: {integrity: sha512-cDJ9lE729MGV6hfcdrG0W7IHlacYZADU9FQwUnVrDv8Haz3YQ8I503LV8XdOnh3gVgwThGjj3pwKT2cRHoqnaA==}
     peerDependencies:
@@ -1694,12 +1680,12 @@ packages:
       '@internationalized/date': 3.5.3
     dev: false
 
-  /@zag-js/date-utils@0.51.1(@internationalized/date@3.5.2):
-    resolution: {integrity: sha512-Psgr602GFs28zM7tIWGqg+KaVz5cHvvq8EJ8aeYkjdDwoqTSTEKR7ydDzXiuxC00edY70z0+l5noMUGOt1Lj5g==}
+  /@zag-js/date-utils@0.50.0(@internationalized/date@3.5.4):
+    resolution: {integrity: sha512-cDJ9lE729MGV6hfcdrG0W7IHlacYZADU9FQwUnVrDv8Haz3YQ8I503LV8XdOnh3gVgwThGjj3pwKT2cRHoqnaA==}
     peerDependencies:
       '@internationalized/date': '>=3.0.0'
     dependencies:
-      '@internationalized/date': 3.5.2
+      '@internationalized/date': 3.5.4
     dev: false
 
   /@zag-js/date-utils@0.51.1(@internationalized/date@3.5.3):
@@ -1708,6 +1694,14 @@ packages:
       '@internationalized/date': '>=3.0.0'
     dependencies:
       '@internationalized/date': 3.5.3
+    dev: false
+
+  /@zag-js/date-utils@0.51.1(@internationalized/date@3.5.4):
+    resolution: {integrity: sha512-Psgr602GFs28zM7tIWGqg+KaVz5cHvvq8EJ8aeYkjdDwoqTSTEKR7ydDzXiuxC00edY70z0+l5noMUGOt1Lj5g==}
+    peerDependencies:
+      '@internationalized/date': '>=3.0.0'
+    dependencies:
+      '@internationalized/date': 3.5.4
     dev: false
 
   /@zag-js/dialog@0.50.0:
