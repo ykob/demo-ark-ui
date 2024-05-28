@@ -1,19 +1,12 @@
-import { createToaster } from '@ark-ui/react';
+import { createToaster, Portal, Toaster } from '@ark-ui/react';
+import { css } from 'styled-system/css';
+import { Toast } from '~/components/ark-ui/';
 import { UISection, UISectionHeading } from '~/components/common';
-import { Toast } from '~/components/common/';
 
 export function ToastSection() {
-  const [Toaster, toast] = createToaster({
+  const toaster = createToaster({
     placement: 'bottom-end',
-    render(toast) {
-      return (
-        <Toast
-          toastTitle={toast.title}
-          toastDescription={toast.description}
-          removeToast={toast.dismiss}
-        />
-      );
-    },
+    duration: 5000,
   });
 
   return (
@@ -22,23 +15,33 @@ export function ToastSection() {
       <div>
         <button
           onClick={() => {
-            toast.create({
+            toaster.create({
               title: `#${Math.floor(Math.random() * 1000)}`,
               description: 'It is a description text.',
-              render: (toast) => (
-                <Toast
-                  toastTitle={toast.title}
-                  toastDescription={toast.description}
-                  removeToast={toast.dismiss}
-                />
-              ),
             });
           }}
         >
           Add Toast
         </button>
       </div>
-      <Toaster />
+      <Portal>
+        <Toaster toaster={toaster} className={styles.toaster}>
+          {(toast) => (
+            <Toast
+              toastTitle={toast.title}
+              toastDescription={toast.description}
+            />
+          )}
+        </Toaster>
+      </Portal>
     </UISection>
   );
 }
+
+const styles = {
+  toaster: css({
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 4,
+  }),
+};

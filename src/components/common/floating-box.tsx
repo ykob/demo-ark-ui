@@ -18,7 +18,6 @@ export function FloatingBox({
 const styles = {
   wrap: css({
     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
-    p: 4,
     rounded: 'md',
     bg: 'white',
   }),
