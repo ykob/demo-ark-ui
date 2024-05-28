@@ -47,9 +47,7 @@ export const ArkCombobox = ({
           <Combobox.Content>
             <FloatingBox>
               <Combobox.ItemGroup id="framework">
-                <Combobox.ItemGroupLabel htmlFor="framework">
-                  Frameworks
-                </Combobox.ItemGroupLabel>
+                <Combobox.ItemGroupLabel>Frameworks</Combobox.ItemGroupLabel>
                 {items.map((item) => (
                   <Combobox.Item
                     key={item.value}
