@@ -8,13 +8,11 @@ import { FloatingBox, TransparentButton } from '~/components/common';
 type ToastProps = ComponentProps<'div'> & {
   toastTitle?: ReactNode;
   toastDescription?: ReactNode;
-  removeToast?: () => void;
 };
 
 export function ArkToast({
   toastTitle,
   toastDescription,
-  removeToast,
   ...props
 }: ToastProps) {
   return (
