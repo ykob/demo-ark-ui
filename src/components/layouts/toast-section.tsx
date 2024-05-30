@@ -1,7 +1,11 @@
 import { createToaster, Portal, Toaster } from '@ark-ui/react';
 import { css } from 'styled-system/css';
 import { Toast } from '~/components/ark-ui/';
-import { UISection, UISectionHeading } from '~/components/common';
+import {
+  TransparentButton,
+  UISection,
+  UISectionHeading,
+} from '~/components/common';
 
 export function ToastSection() {
   const toaster = createToaster({
@@ -13,16 +17,50 @@ export function ToastSection() {
     <UISection>
       <UISectionHeading>Toast</UISectionHeading>
       <div>
-        <button
+        <TransparentButton
           onClick={() => {
             toaster.create({
-              title: `#${Math.floor(Math.random() * 1000)}`,
-              description: 'It is a description text.',
+              title: `#${new Date().toISOString()}`,
+              description: 'It is a success toast.',
+              type: 'success',
             });
           }}
         >
-          Add Toast
-        </button>
+          Add Success Toast
+        </TransparentButton>
+        <TransparentButton
+          onClick={() => {
+            toaster.create({
+              title: `#${new Date().toISOString()}`,
+              description: 'It is an error toast.',
+              type: 'error',
+            });
+          }}
+        >
+          Add Error Toast
+        </TransparentButton>
+        <TransparentButton
+          onClick={() => {
+            toaster.create({
+              title: `#${new Date().toISOString()}`,
+              description: 'It is an information toast.',
+              type: 'info',
+            });
+          }}
+        >
+          Add Information Toast
+        </TransparentButton>
+        <TransparentButton
+          onClick={() => {
+            toaster.create({
+              title: `#${new Date().toISOString()}`,
+              description: 'It is an info toast.',
+              type: 'warning',
+            });
+          }}
+        >
+          Add Warning Toast
+        </TransparentButton>
       </div>
       <Portal>
         <Toaster toaster={toaster} className={styles.toaster}>
