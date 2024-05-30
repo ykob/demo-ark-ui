@@ -8,11 +8,13 @@ import { FloatingBox, TransparentButton } from '~/components/common';
 type ToastProps = ComponentProps<'div'> & {
   toastTitle?: ReactNode;
   toastDescription?: ReactNode;
+  showCloseTrigger?: boolean;
 };
 
 export function ArkToast({
   toastTitle,
   toastDescription,
+  showCloseTrigger = false,
   ...props
 }: ToastProps) {
   return (
@@ -22,11 +24,13 @@ export function ArkToast({
           {toastTitle && <div>{toastTitle}</div>}
           {toastDescription && <div>{toastDescription}</div>}
         </div>
-        <Toast.CloseTrigger asChild>
-          <TransparentButton square>
-            <Icon path={mdiClose} size={1} />
-          </TransparentButton>
-        </Toast.CloseTrigger>
+        {showCloseTrigger && (
+          <Toast.CloseTrigger asChild>
+            <TransparentButton square>
+              <Icon path={mdiClose} size={1} />
+            </TransparentButton>
+          </Toast.CloseTrigger>
+        )}
       </div>
     </FloatingBox>
   );
