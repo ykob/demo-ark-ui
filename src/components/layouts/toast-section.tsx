@@ -54,7 +54,7 @@ export function ToastSection() {
           onClick={() => {
             toaster.create({
               title: `#${new Date().toISOString()}`,
-              description: 'It is an info toast.',
+              description: 'It is a warning toast.',
               type: 'warning',
             });
           }}
@@ -66,6 +66,8 @@ export function ToastSection() {
         <Toaster toaster={toaster} className={styles.toaster}>
           {(toast) => (
             <Toast
+              key={toast.id}
+              type={toast.type}
               toastTitle={toast.title}
               toastDescription={toast.description}
             />
