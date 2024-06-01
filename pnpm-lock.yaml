@@ -45,6 +45,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.0
         version: 4.3.0(vite@5.2.11(@types/node@20.12.7)(lightningcss@1.23.0))
+      '@zag-js/toast':
+        specifier: ^0.51.2
+        version: 0.51.2
       eslint:
         specifier: ^9.3.0
         version: 9.3.0
