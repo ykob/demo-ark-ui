@@ -2,7 +2,7 @@ import { ComponentProps } from 'react';
 import { cva, cx } from 'styled-system/css';
 
 type FloatingBoxProps = ComponentProps<'div'> & {
-  type: 'base' | 'success' | 'warning' | 'danger' | 'information';
+  type?: 'base' | 'success' | 'warning' | 'danger' | 'information';
 };
 
 export function FloatingBox({
