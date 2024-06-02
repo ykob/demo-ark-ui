@@ -23,7 +23,7 @@ updates:
         patterns:
           - 'eslint*'
           - 'prettier-plugin-organize-imports'
-          - '@typescript-eslint*'
+          - 'typescript-eslint*'
       vite:
         patterns:
           - 'vite'
