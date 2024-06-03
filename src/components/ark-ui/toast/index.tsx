@@ -1,5 +1,6 @@
 import { mdiClose } from '@mdi/js';
 import { Icon } from '@mdi/react';
+import { Type as ToastType } from '@zag-js/toast';
 import { ComponentProps, ReactNode } from 'react';
 import { css } from 'styled-system/css';
 import { FloatingBox, TransparentButton } from '~/components/common';
