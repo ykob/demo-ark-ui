@@ -1,20 +1,18 @@
-import { Toast } from '@ark-ui/react';
 import { mdiClose } from '@mdi/js';
 import { Icon } from '@mdi/react';
-import { Type as ToastType } from '@zag-js/toast';
 import { ComponentProps, ReactNode } from 'react';
 import { css } from 'styled-system/css';
 import { FloatingBox, TransparentButton } from '~/components/common';
 
 type ToastProps = ComponentProps<'div'> & {
-  showCloseTrigger?: boolean;
+  dismiss?: (id?: string) => void;
   toastTitle?: ReactNode;
   toastDescription?: ReactNode;
   type?: ToastType;
 };
 
 export function ArkToast({
-  showCloseTrigger = false,
+  dismiss,
   toastTitle,
   toastDescription,
   type = 'success',
@@ -42,12 +40,15 @@ export function ArkToast({
           {toastTitle && <div>{toastTitle}</div>}
           {toastDescription && <div>{toastDescription}</div>}
         </div>
-        {showCloseTrigger && (
-          <Toast.CloseTrigger asChild>
-            <TransparentButton square>
-              <Icon path={mdiClose} size={1} />
-            </TransparentButton>
-          </Toast.CloseTrigger>
+        {dismiss && (
+          <TransparentButton
+            square
+            onClick={() => {
+              dismiss(props.id);
+            }}
+          >
+            <Icon path={mdiClose} size={1} />
+          </TransparentButton>
         )}
       </div>
     </FloatingBox>
