@@ -56,6 +56,7 @@ export function ToastSection() {
               title: `#${new Date().toISOString()}`,
               description: 'It is a warning toast.',
               type: 'warning',
+              duration: 10000,
             });
           }}
         >
@@ -66,12 +67,13 @@ export function ToastSection() {
         <Toaster toaster={toaster} className={styles.toaster}>
           {(toast) => (
             <Toast
-              id={toast.id}
               key={toast.id}
               type={toast.type}
               toastTitle={toast.title}
               toastDescription={toast.description}
-              dismiss={toaster.dismiss}
+              dismiss={() => {
+                toaster.dismiss(toast.id);
+              }}
             />
           )}
         </Toaster>

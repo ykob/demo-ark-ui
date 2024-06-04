@@ -6,7 +6,7 @@ import { css } from 'styled-system/css';
 import { FloatingBox, TransparentButton } from '~/components/common';
 
 type ToastProps = ComponentProps<'div'> & {
-  dismiss?: (id?: string) => void;
+  dismiss?: () => void;
   toastTitle?: ReactNode;
   toastDescription?: ReactNode;
   type?: ToastType;
@@ -42,12 +42,7 @@ export function ArkToast({
           {toastDescription && <div>{toastDescription}</div>}
         </div>
         {dismiss && (
-          <TransparentButton
-            square
-            onClick={() => {
-              dismiss(props.id);
-            }}
-          >
+          <TransparentButton square onClick={dismiss}>
             <Icon path={mdiClose} size={1} />
           </TransparentButton>
         )}
