@@ -1,4 +1,6 @@
 import { createToaster, Portal, Toaster } from '@ark-ui/react';
+import { Type as ToastType } from '@zag-js/toast';
+import { ReactNode } from 'react';
 import { css } from 'styled-system/css';
 import { Toast } from '~/components/ark-ui/';
 import {
@@ -13,13 +15,29 @@ export function ToastSection() {
     duration: 5000,
   });
 
+  const createToast = ({
+    title,
+    description,
+    type = 'info',
+  }: {
+    title: ReactNode;
+    description?: ReactNode;
+    type?: ToastType;
+  }) => {
+    toaster.create({
+      title,
+      description,
+      type,
+    });
+  };
+
   return (
     <UISection>
       <UISectionHeading>Toast</UISectionHeading>
       <div>
         <TransparentButton
           onClick={() => {
-            toaster.create({
+            createToast({
               title: `#${new Date().toISOString()}`,
               description: 'It is a success toast.',
               type: 'success',
@@ -30,7 +48,7 @@ export function ToastSection() {
         </TransparentButton>
         <TransparentButton
           onClick={() => {
-            toaster.create({
+            createToast({
               title: `#${new Date().toISOString()}`,
               description: 'It is an error toast.',
               type: 'error',
@@ -41,7 +59,7 @@ export function ToastSection() {
         </TransparentButton>
         <TransparentButton
           onClick={() => {
-            toaster.create({
+            createToast({
               title: `#${new Date().toISOString()}`,
               description: 'It is an information toast.',
               type: 'info',
@@ -52,11 +70,10 @@ export function ToastSection() {
         </TransparentButton>
         <TransparentButton
           onClick={() => {
-            toaster.create({
+            createToast({
               title: `#${new Date().toISOString()}`,
               description: 'It is a warning toast.',
               type: 'warning',
-              duration: 10000,
             });
           }}
         >
