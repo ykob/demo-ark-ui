@@ -1,8 +1,7 @@
 import { createToaster, Portal, Toaster } from '@ark-ui/react';
-import { Type as ToastType } from '@zag-js/toast';
 import { ReactNode } from 'react';
 import { css } from 'styled-system/css';
-import { Toast } from '~/components/ark-ui/';
+import { Toast, type ToastType } from '~/components/ark-ui/';
 import {
   TransparentButton,
   UISection,
