@@ -3,6 +3,7 @@ import { container } from 'styled-system/patterns';
 import {
   ComboboxSection,
   DatePickerSection,
+  MenuSection,
   PageHeader,
   ToastSection,
 } from '~/components/layouts';
@@ -13,6 +14,7 @@ export default function App() {
       <PageHeader />
       <ComboboxSection />
       <DatePickerSection />
+      <MenuSection />
       <ToastSection />
     </div>
   );
