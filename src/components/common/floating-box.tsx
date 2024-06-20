@@ -1,22 +1,20 @@
-import { ComponentProps } from 'react';
+import { ComponentProps, Ref, forwardRef } from 'react';
 import { cva, cx } from 'styled-system/css';
 
 type FloatingBoxProps = ComponentProps<'div'> & {
   type?: 'base' | 'success' | 'warning' | 'danger' | 'information';
 };
 
-export function FloatingBox({
-  children,
-  className,
-  type = 'base',
-  ...props
-}: FloatingBoxProps) {
+export const FloatingBox = forwardRef(function (
+  { children, className, type = 'base', ...props }: FloatingBoxProps,
+  ref: Ref<HTMLDivElement>,
+) {
   return (
-    <div className={cx(styles.wrap({ type }), className)} {...props}>
+    <div className={cx(styles.wrap({ type }), className)} ref={ref} {...props}>
       {children}
     </div>
   );
-}
+});
 
 const styles = {
   wrap: cva({

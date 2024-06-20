@@ -16,7 +16,7 @@ export function ArkMenu({
 }: ArkMenuProps) {
   return (
     <Menu.Root {...props}>
-      <Menu.Trigger>{renderTrigger}</Menu.Trigger>
+      <Menu.Trigger asChild>{renderTrigger}</Menu.Trigger>
       <Portal container={portalContainer}>
         <Menu.Positioner>
           <Menu.Content asChild>
