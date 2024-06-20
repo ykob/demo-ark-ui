@@ -1,22 +1,26 @@
 import { Menu, Portal } from '@ark-ui/react';
-import { RefObject } from 'react';
+import { ComponentProps, ReactNode, RefAttributes, RefObject } from 'react';
+import { FloatingBox } from '~/components/common';
 
-type ArkMenuProps = {
-  renderTrigger: React.ReactNode;
-} & React.RefAttributes<HTMLDivElement> & {
-    portalContainer?: RefObject<HTMLElement>;
-  };
+type ArkMenuProps = RefAttributes<HTMLDivElement> & {
+  portalContainer?: RefObject<HTMLElement>;
+  renderContent: ReactNode;
+  renderTrigger: ReactNode;
+} & ComponentProps<typeof Menu.Root>;
 
-export function ArkMenu({ portalContainer, renderTrigger }: ArkMenuProps) {
+export function ArkMenu({
+  portalContainer,
+  renderContent,
+  renderTrigger,
+  ...props
+}: ArkMenuProps) {
   return (
-    <Menu.Root>
+    <Menu.Root {...props}>
       <Menu.Trigger>{renderTrigger}</Menu.Trigger>
       <Portal container={portalContainer}>
         <Menu.Positioner>
-          <Menu.Content>
-            <Menu.Item value="react">React</Menu.Item>
-            <Menu.Item value="solid">Solid</Menu.Item>
-            <Menu.Item value="vue">Vue</Menu.Item>
+          <Menu.Content asChild>
+            <FloatingBox>{renderContent}</FloatingBox>
           </Menu.Content>
         </Menu.Positioner>
       </Portal>
