@@ -37,13 +37,19 @@ export function ArkToast({
         return 'base';
     }
   };
+  const ToastTitle = () => toastTitle;
+  const ToastDescription = () => toastDescription;
 
   return (
     <FloatingBox {...props} type={floatingBoxType()}>
       <div className={styles.container}>
         <div className={styles.content}>
-          {toastTitle && <div>{toastTitle}</div>}
-          {toastDescription && <div>{toastDescription}</div>}
+          <div>
+            <ToastTitle />
+          </div>
+          <div>
+            <ToastDescription />
+          </div>
         </div>
         {dismiss && (
           <TransparentButton square onClick={dismiss}>
