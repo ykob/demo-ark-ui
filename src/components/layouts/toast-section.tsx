@@ -37,7 +37,7 @@ export function ToastSection() {
         <TransparentButton
           onClick={() => {
             createToast({
-              title: <div>`#${new Date().toISOString()}`</div>,
+              title: <div>#${new Date().toISOString()}</div>,
               description: 'It is a success toast.',
               type: 'success',
             });
@@ -48,7 +48,7 @@ export function ToastSection() {
         <TransparentButton
           onClick={() => {
             createToast({
-              title: <div>`#${new Date().toISOString()}`</div>,
+              title: <div>#${new Date().toISOString()}</div>,
               description: 'It is an error toast.',
               type: 'error',
             });
@@ -59,7 +59,7 @@ export function ToastSection() {
         <TransparentButton
           onClick={() => {
             createToast({
-              title: <div>`#${new Date().toISOString()}`</div>,
+              title: <div>#${new Date().toISOString()}</div>,
               description: 'It is an information toast.',
               type: 'info',
             });
@@ -70,7 +70,7 @@ export function ToastSection() {
         <TransparentButton
           onClick={() => {
             createToast({
-              title: <div>`#${new Date().toISOString()}`</div>,
+              title: <div>#${new Date().toISOString()}</div>,
               description: 'It is a warning toast.',
               type: 'warning',
             });
