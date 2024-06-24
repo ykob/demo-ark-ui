@@ -10,7 +10,7 @@ import {
 export function MenuSection() {
   return (
     <UISection>
-      <UISectionHeading>Toast</UISectionHeading>
+      <UISectionHeading>Menu</UISectionHeading>
       <div>
         <Menu
           renderTrigger={<TransparentButton>Open Menu</TransparentButton>}
