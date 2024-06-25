@@ -16,6 +16,8 @@ export type ToastType = Parameters<
   ComponentProps<typeof Toaster>['toaster']['create']
 >[0]['type'];
 
+const ToastText = ({ value }: { value: ReactNode }) => value;
+
 export function ArkToast({
   dismiss,
   toastTitle,
@@ -37,18 +39,16 @@ export function ArkToast({
         return 'base';
     }
   };
-  const ToastTitle = () => toastTitle;
-  const ToastDescription = () => toastDescription;
 
   return (
     <FloatingBox {...props} type={floatingBoxType()}>
       <div className={styles.container}>
         <div className={styles.content}>
           <div>
-            <ToastTitle />
+            <ToastText value={toastTitle} />
           </div>
           <div>
-            <ToastDescription />
+            <ToastText value={toastDescription} />
           </div>
         </div>
         {dismiss && (
