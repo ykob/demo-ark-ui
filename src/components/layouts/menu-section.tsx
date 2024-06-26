@@ -2,6 +2,7 @@ import { Menu as ArkMenu } from '@ark-ui/react';
 import { css } from 'styled-system/css';
 import { Menu } from '~/components/ark-ui';
 import {
+  MenuItem,
   TransparentButton,
   UISection,
   UISectionHeading,
@@ -16,13 +17,21 @@ export function MenuSection() {
           renderTrigger={<TransparentButton>Open Menu</TransparentButton>}
           renderContent={
             <div className={styles.content}>
-              <ArkMenu.Item value="react">React</ArkMenu.Item>
-              <ArkMenu.Item value="solid">Solid</ArkMenu.Item>
-              <ArkMenu.Item value="vue">Vue</ArkMenu.Item>
-              <ArkMenu.Item value="hyperlink" asChild>
-                <a href="https://ark-ui.com/" target="_blank">
-                  Hyperlink
-                </a>
+              <ArkMenu.Item asChild value="react">
+                <MenuItem>React</MenuItem>
+              </ArkMenu.Item>
+              <ArkMenu.Item asChild value="solid">
+                <MenuItem>Solid</MenuItem>
+              </ArkMenu.Item>
+              <ArkMenu.Item asChild value="vue">
+                <MenuItem>Vue</MenuItem>
+              </ArkMenu.Item>
+              <ArkMenu.Item asChild value="hyperlink">
+                <MenuItem>
+                  <a href="https://ark-ui.com/" target="_blank">
+                    Hyperlink
+                  </a>
+                </MenuItem>
               </ArkMenu.Item>
             </div>
           }
@@ -35,6 +44,6 @@ export function MenuSection() {
 
 const styles = {
   content: css({
-    p: 4,
+    py: 2,
   }),
 };
