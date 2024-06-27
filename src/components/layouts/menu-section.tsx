@@ -27,7 +27,7 @@ export function MenuSection() {
                 <MenuItem>Vue</MenuItem>
               </ArkMenu.Item>
               <ArkMenu.Item asChild value="hyperlink">
-                <MenuItem>
+                <MenuItem asChild>
                   <a href="https://ark-ui.com/" target="_blank">
                     Hyperlink
                   </a>

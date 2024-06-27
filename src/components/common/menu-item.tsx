@@ -1,15 +1,21 @@
 import { ComponentProps } from 'react';
 import { css } from 'styled-system/css';
+import { Slot, AsChildProps } from '~/components/utils/slot';
 
-export function MenuItem({ children, ...props }: ComponentProps<'div'>) {
+type MenuItemProps = AsChildProps<ComponentProps<'div'>>;
+
+export function MenuItem({ asChild, children, ...props }: MenuItemProps) {
+  const Component = asChild ? Slot : 'div';
+
   return (
-    <div className={style} {...props}>
+    <Component className={style} {...props}>
       {children}
-    </div>
+    </Component>
   );
 }
 
 const style = css({
+  display: 'block',
   py: 2,
   px: 4,
   cursor: 'pointer',
