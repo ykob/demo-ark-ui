@@ -1,10 +1,14 @@
 import { Combobox, Portal, type ComboboxRootProps } from '@ark-ui/react';
-import { mdiCheck, mdiChevronDown, mdiClose } from '@mdi/js';
+import { mdiChevronDown, mdiClose } from '@mdi/js';
 import { Icon } from '@mdi/react';
 import React, { RefObject } from 'react';
 import { css, cx } from 'styled-system/css';
-import { FloatingBox, InputField } from '~/components/common';
-import { TransparentButton } from '../../common/transparent-button';
+import {
+  FloatingBox,
+  InputField,
+  MenuItem,
+  TransparentButton,
+} from '~/components/common';
 
 type ArkComboboxProps = ComboboxRootProps<{
   label: string;
@@ -49,15 +53,8 @@ export const ArkCombobox = ({
               <Combobox.ItemGroup id="framework">
                 <Combobox.ItemGroupLabel>Frameworks</Combobox.ItemGroupLabel>
                 {items.map((item) => (
-                  <Combobox.Item
-                    key={item.value}
-                    item={item}
-                    className={styles.item}
-                  >
-                    <Combobox.ItemText>{item.label}</Combobox.ItemText>
-                    <Combobox.ItemIndicator>
-                      <Icon path={mdiCheck} size={0.8} />
-                    </Combobox.ItemIndicator>
+                  <Combobox.Item key={item.value} item={item} asChild>
+                    <MenuItem>{item.label}</MenuItem>
                   </Combobox.Item>
                 ))}
               </Combobox.ItemGroup>
@@ -76,25 +73,5 @@ const styles = {
   control: css({
     display: 'flex',
     gap: 1,
-  }),
-  item: css({
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center',
-    gap: 1,
-    py: 1,
-    px: 2,
-    _hover: {
-      bg: 'blue.200',
-    },
-    _checked: {
-      bg: 'blue.300',
-    },
-    _disabled: {
-      color: 'gray.300',
-    },
-    _highlighted: {
-      bg: 'blue.200',
-    },
   }),
 };
