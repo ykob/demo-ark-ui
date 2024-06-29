@@ -1,6 +1,6 @@
 import { ComponentProps } from 'react';
 import { css } from 'styled-system/css';
-import { Slot, AsChildProps } from '~/components/utils/slot';
+import { AsChildProps, Slot } from '~/components/utils/slot';
 
 type MenuItemProps = AsChildProps<ComponentProps<'div'>>;
 
@@ -24,5 +24,9 @@ const style = css({
   },
   _highlighted: {
     bgColor: 'blue.200',
+  },
+  _disabled: {
+    cursor: 'not-allowed',
+    opacity: 0.5,
   },
 });
