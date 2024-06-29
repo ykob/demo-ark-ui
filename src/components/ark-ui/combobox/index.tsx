@@ -7,6 +7,7 @@ import {
   FloatingBox,
   InputField,
   MenuItem,
+  MenuItemHeading,
   TransparentButton,
 } from '~/components/common';
 
@@ -51,7 +52,9 @@ export const ArkCombobox = ({
           <Combobox.Content>
             <FloatingBox>
               <Combobox.ItemGroup id="framework">
-                <Combobox.ItemGroupLabel>Frameworks</Combobox.ItemGroupLabel>
+                <Combobox.ItemGroupLabel asChild>
+                  <MenuItemHeading>Frameworks</MenuItemHeading>
+                </Combobox.ItemGroupLabel>
                 {items.map((item) => (
                   <Combobox.Item key={item.value} item={item} asChild>
                     <MenuItem>{item.label}</MenuItem>
