@@ -1,6 +1,6 @@
 import { ComponentProps } from 'react';
 import { css } from 'styled-system/css';
-import { AsChildProps, ComponentAsChild } from '~/components/utils/slot';
+import { AsChildProps, ComponentAsChild } from '~/components/utils';
 
 type MenuItemProps = AsChildProps<ComponentProps<'div'>>;
 
