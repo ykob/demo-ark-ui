@@ -1,20 +1,13 @@
 import { ComponentProps } from 'react';
 import { css } from 'styled-system/css';
-import { AsChildProps, Slot } from '~/components/utils/slot';
 
-type MenuItemHeadingProps = AsChildProps<ComponentProps<'div'>>;
+type MenuItemHeadingProps = ComponentProps<'div'>;
 
-export function MenuItemHeading({
-  asChild,
-  children,
-  ...props
-}: MenuItemHeadingProps) {
-  const Component = asChild ? Slot : 'div';
-
+export function MenuItemHeading({ children, ...props }: MenuItemHeadingProps) {
   return (
-    <Component className={style} {...props}>
+    <div className={style} {...props}>
       {children}
-    </Component>
+    </div>
   );
 }
 
