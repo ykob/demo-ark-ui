@@ -15,7 +15,7 @@ type SlotProps = HTMLAttributes<HTMLElement> & {
   children?: ReactNode;
 };
 
-export function Slot({ children, className, style, ...props }: SlotProps) {
+function Slot({ children, className, style, ...props }: SlotProps) {
   if (isValidElement(children)) {
     return cloneElement(children, {
       ...props,
@@ -31,4 +31,11 @@ export function Slot({ children, className, style, ...props }: SlotProps) {
     Children.only(null);
   }
   return null;
+}
+
+export function ComponentAsChild(
+  asChild: boolean | undefined,
+  element: string = 'div',
+) {
+  return asChild ? Slot : element;
 }
