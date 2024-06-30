@@ -23,7 +23,7 @@ export const ArkDatePicker = ({
       <Portal container={portalContainer}>
         <DatePicker.Positioner>
           <DatePicker.Content>
-            <FloatingBox>
+            <FloatingBox className={styles.content}>
               <DatePickerDayView />
               <DatePickerMonthView />
               <DatePickerYearView />
@@ -39,5 +39,8 @@ const styles = {
   wrap: css({
     height: '2em',
     position: 'relative',
+  }),
+  content: css({
+    p: 4,
   }),
 };
