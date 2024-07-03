@@ -15,10 +15,13 @@ export function MenuItem({ asChild, children, ...props }: MenuItemProps) {
 }
 
 const style = css({
+  w: '100%',
+  boxSizing: 'border-box',
   display: 'block',
   py: 2,
   px: 4,
   cursor: 'pointer',
+  textAlign: 'left',
   _hover: {
     bgColor: 'blue.200',
   },

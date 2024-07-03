@@ -57,7 +57,9 @@ export const ArkCombobox = ({
                 </Combobox.ItemGroupLabel>
                 {items.map((item) => (
                   <Combobox.Item key={item.value} item={item} asChild>
-                    <MenuItem>{item.label}</MenuItem>
+                    <MenuItem asChild>
+                      <button>{item.label}</button>
+                    </MenuItem>
                   </Combobox.Item>
                 ))}
               </Combobox.ItemGroup>
